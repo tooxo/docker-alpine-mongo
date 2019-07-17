@@ -7,8 +7,8 @@ RUN apk update
 
 RUN apk add --no-cache mongodb
 
-VOLUME /data/db
-EXPOSE 27017 28017
+RUN mkdir /data
+RUN mkdir /data/db
 
 COPY run.sh /root
 ENTRYPOINT [ "/root/run.sh" ]
