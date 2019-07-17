@@ -12,4 +12,4 @@ RUN mkdir /data/db
 
 COPY run.sh /root
 ENTRYPOINT [ "/root/run.sh" ]
-CMD [ "mongod", "--quiet", "--bind_ip", "0.0.0.0", "|", "grep", '-Ev' '"conn1|conn2|init"', '|', 'sed', '-r', '"s/[[:cntrl:]]\[[0-9]]{1,3}m//g"']
+CMD [ "mongod", "--quiet", "--bind_ip", "0.0.0.0", "|", "grep", '-Ev' '"conn1|conn2|init"']
