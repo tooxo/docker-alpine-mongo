@@ -1,9 +1,0 @@
-version: '2'
-
-services:
-    mongo:
-        build: .
-        volumes: 
-          - ./mongo/:/data/db
-        ports:
-          - 27002:27017
